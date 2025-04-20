@@ -1,0 +1,9 @@
+<h2>Lấy lại mật khẩu</h2>
+<form (ngSubmit)="onSendEmail()" [formGroup]="emailForm">
+  <label for="email">Email:</label>
+  <input type="email" formControlName="email" id="email" class="form-control" placeholder="Nhập email của bạn" />
+  <div *ngIf="emailForm.get('email')?.invalid && emailForm.get('email')?.touched" class="text-danger">
+    Email không hợp lệ.
+  </div>
+  <button type="submit" class="btn btn-primary mt-2">Gửi yêu cầu</button>
+</form>

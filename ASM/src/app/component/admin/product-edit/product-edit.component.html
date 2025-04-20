@@ -1,0 +1,23 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="productForm">
+  <div class="mb-3">
+    <label for="name" class="form-label">Tên Sản Phẩm</label>
+    <input type="text" formControlName="name" id="name" class="form-control" />
+  </div>
+  <div class="mb-3">
+    <label for="category" class="form-label">Danh Mục</label>
+    <input type="text" formControlName="category" id="category" class="form-control" />
+  </div>
+  <div class="mb-3">
+    <label for="price" class="form-label">Giá</label>
+    <input type="number" formControlName="price" id="price" class="form-control" />
+  </div>
+  <div class="mb-3">
+    <label for="desc" class="form-label">Mô Tả</label>
+    <textarea formControlName="desc" id="desc" class="form-control"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="image" class="form-label">Hình Ảnh</label>
+    <input type="text" formControlName="image" id="image" class="form-control" />
+  </div>
+  <button type="submit" class="btn btn-primary">Update Product</button>
+</form>
